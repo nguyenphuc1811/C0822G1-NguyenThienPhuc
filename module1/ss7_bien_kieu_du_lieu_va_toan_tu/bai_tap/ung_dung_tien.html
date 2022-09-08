@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>        Table th:nth-child(2) {
+        width: 100px;
+    }
+    </style>
+</head>
+<body><b>&emsp;&emsp;Amount</b> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>From Currency</b>&emsp;&emsp;&emsp;&emsp;&emsp;<b>To
+    Currency</b> <br><input type="text" id="amount">&emsp;&emsp;&emsp;
+    <select id="select1">
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select> &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;<select id="select2">
+    <option value="a">VND</option>
+    <option value="b">USD</option>
+</select> &emsp;&emsp;&emsp;&emsp;<button onclick="lamGiDo()">Convert</button>
+<br>
+<p id="result"></p>
+<script>    function lamGiDo() {
+    let giaTriVao = document.getElementById('amount').value;
+    let select1 = document.getElementById('select1').value;
+    let select2 = document.getElementById('select2').value;
+    if (isNaN(giaTriVao) || giaTriVao <= 0) {
+        document.getElementById("result").innerHTML = "Số bạn nhập không phải là số hoặc là số âm"
+    } else {
+        if (select1 == select2) {
+            document.getElementById("result").innerHTML = "Vui lòng chọn lại USD hoặc VND"
+        }
+        if (select1 == "a" && select2 == "b") {
+            document.getElementById("result").innerHTML = "Số tiền là = " + giaTriVao / 23000 + " $"
+        } else if (select1 == "b" && select2 == "a") {
+            document.getElementById("result").innerHTML = "Số tiền là = " + giaTriVao * 23000 + " VND"
+        }
+    }
+}
+</script>
+</body>
+</html>
