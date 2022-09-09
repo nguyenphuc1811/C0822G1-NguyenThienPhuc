@@ -17,20 +17,20 @@ To Currency
     <option value="a">USD</option>
     <option value="b">VND</option>
 </select>
-<button onclick="doitien()">convert</button>
+<button onclick="doiTien()">convert</button>
 <p id="kq"></p>
 <script>
-    function doitien() {
-        let nhap = document.getElementById("money").value
-        let sl1 = document.getElementById("select1").value
-        let sl2 = document.getElementById("select2").value
-        if(sl1 == sl2){
+    function doiTien() {
+        let nhap = document.getElementById("money").value;
+        let from = document.getElementById("select1").value;
+        let to = document.getElementById("select2").value;
+        if (from == to) {
             document.getElementById("kq").innerHTML = "Vui lòng chọn lai USD hoặc VND"
-        }else {
-            if (sl1 == "a" && sl2 == "b") {
+        } else {
+            if (from == "a" && to == "b") {
                 document.getElementById("kq").innerHTML = " Số tiền là  " + nhap * 23000 + " VND"
             } else {
-                (sl1 == "b" && sl2 == "a")
+                (from == "b" && to == "a")
                 document.getElementById("kq").innerHTML = "Số tiền là  " + nhap / 23000 + " USD"
             }
         }

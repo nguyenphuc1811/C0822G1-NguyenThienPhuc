@@ -6,29 +6,34 @@
 </head>
 <body>
 
-    <input type="number" id="number1">
-    <input type="number" id="number2">
-    <br><br>
-    <button onclick="cong()">Addition(+)</button>
-    <button onclick="tru()">Subtraction(-)</button>
-    <button onclick="nhan()">Multiplication(X)</button>
-    <button onclick="chia()">Division(/)</button>
-    <p id="result"></p>
+<input type="number" id="number1">
+<input type="number" id="number2">
+<br><br>
+<button onclick="cong()">Addition(+)</button>
+<button onclick="tru()">Subtraction(-)</button>
+<button onclick="nhan()">Multiplication(X)</button>
+<button onclick="chia()">Division(/)</button>
+<p id="result"></p>
 <script>
     function cong() {
         let so1 = +document.getElementById("number1").value;
         let so2 = +document.getElementById("number2").value;
         document.getElementById("result").innerHTML = so1 + so2
     }
+
     function tru() {
         let so1 = +document.getElementById("number1").value;
         let so2 = +document.getElementById("number2").value;
         document.getElementById("result").innerHTML = so1 - so2
-    }function nhan() {
+    }
+
+    function nhan() {
         let so1 = +document.getElementById("number1").value;
         let so2 = +document.getElementById("number2").value;
         document.getElementById("result").innerHTML = so1 * so2
-    }function chia() {
+    }
+
+    function chia() {
         let so1 = +document.getElementById("number1").value;
         let so2 = +document.getElementById("number2").value;
         document.getElementById("result").innerHTML = so1 / so2
