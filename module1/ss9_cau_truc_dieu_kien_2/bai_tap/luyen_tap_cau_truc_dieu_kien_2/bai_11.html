@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Thu nhập cá nhân:
+<input type="number" id="money"> VND
+<br>
+Thuế %:
+<p id="ketqua"></p>
+<button onclick="doiTien()">convert</button>
+<br>
+Số tiền còn lại:
+<p id="tongtien"></p>
+<script>
+    function doiTien() {
+        let tien = +document.getElementById("money").value;
+        if (tien >= 20000000) {
+            document.getElementById("ketqua").innerHTML = "20%";
+            document.getElementById("tongtien").innerHTML = tien * 80 / 100;
+        } else if (tien >= 10000000) {
+            document.getElementById("ketqua").innerHTML = "10%";
+            document.getElementById("tongtien").innerHTML = tien * 90 / 100;
+        } else {
+            document.getElementById("ketqua").innerHTML = "5%";
+            document.getElementById("tongtien").innerHTML = tien * 95 / 100;
+        }
+    }
+</script>
+</body>
+</html>

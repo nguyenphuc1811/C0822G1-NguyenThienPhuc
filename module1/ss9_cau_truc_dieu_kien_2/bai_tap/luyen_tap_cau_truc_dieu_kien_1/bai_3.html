@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số bât kỳ
+<input type="number" id="songuyen">
+<button onclick="enTer()">Enter</button>
+<script>
+    function enTer() {
+        let songuyen1 = +document.getElementById("songuyen").value;
+        if (songuyen1 > 0) {
+            alert("Lớn hơn 0");
+        } else {
+            alert("Nhỏ hơn 0");
+        }
+    }
+</script>
+</body>
+</html>

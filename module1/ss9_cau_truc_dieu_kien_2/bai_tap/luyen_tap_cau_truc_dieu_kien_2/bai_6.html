@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soA = +prompt("Nhập số a: ax + b = 0");
+    let soB = +prompt("Nhập số b: ax + b = 0");
+    if (soA === 0 && soB === 0){
+        alert("Phương trình có vô số nghiệm");
+    } else if (soA >0 || soA<0){
+        alert("Phương trình có một nghiệm duy nhất x = " + -soB / soA);
+    }else {
+        alert("Phương trình vô nghiệm");
+    }
+</script>
+</body>
+</html>

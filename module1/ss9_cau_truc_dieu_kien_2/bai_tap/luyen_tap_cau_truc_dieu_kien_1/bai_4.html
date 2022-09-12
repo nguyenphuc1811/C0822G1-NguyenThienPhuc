@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số 1:
+
+<input type="number" id="numbera">
+<br>
+Nhập số 2:
+
+<input type="number" id="numberb">
+<br>
+Nhập số 3:
+<input type="number" id="numberc">
+<br>
+<button onclick="soSanh()">So sánh</button>
+<script>
+    function soSanh() {
+        let so1 = +document.getElementById("numbera").value;
+        let so2 = +document.getElementById("numberb").value;
+        let so3 = +document.getElementById("numberc").value;
+        if (so1 > so2 && so1 > so3) {
+            alert(so1 + " là số lớn nhất")
+        } else if (so2 > so3) {
+            alert(so2 + " là số lớn nhất")
+        } else {
+            alert(so3 + " là số lớn nhất")
+        }
+    }
+</script>
+</body>
+</html>

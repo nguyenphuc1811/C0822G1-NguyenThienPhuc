@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập tuổi
+<input type="number" id="age">
+<button onclick="enTer()">Enter</button>
+<script>
+    function enTer() {
+        let tuoi = +document.getElementById("age").value;
+        if ( tuoi >= 16 ) {
+            alert("Đủ điều kiện vào học lớp 10");
+        } else {
+            alert("Không đủ điều kiện vào học lớp 10");
+        }
+    }
+</script>
+</body>
+</html>

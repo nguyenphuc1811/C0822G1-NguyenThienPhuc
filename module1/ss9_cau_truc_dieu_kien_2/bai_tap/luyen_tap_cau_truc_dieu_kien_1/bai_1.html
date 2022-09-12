@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số a
+<input type="number" id="so1">
+<br>
+Nhập số b
+<input type="number" id="so2">
+<button onclick="enter()">Enter</button>
+<br>
+<p id="result"></p>
+<script>
+    function enter() {
+        let soA = +document.getElementById("so1").value;
+        let soB = +document.getElementById("so2").value;
+        if ( soA % soB === 0 ) {
+            document.getElementById("result").innerHTML = "a chia hết cho b";
+        } else {
+            document.getElementById("result").innerHTML = "a không chia hết cho b";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Số tiền điện thoại đã gọi:
+<input type="number" id="money"> VND
+<br>
+Cước điện thoại %:
+<p id="ketqua"></p>
+<button onclick="doiTien()">convert</button>
+<br>
+tổng số tiền phải trả:
+<p id="tongtien"></p>
+<script>
+    function doiTien() {
+        let tien = +document.getElementById("money").value;
+        if (tien >= 1000000) {
+            document.getElementById("ketqua").innerHTML = "20%";
+            document.getElementById("tongtien").innerHTML = tien * 120 / 100;
+        } else if (tien >= 500000) {
+            document.getElementById("ketqua").innerHTML = "10%";
+            document.getElementById("tongtien").innerHTML = tien * 110 / 100;
+        } else {
+            document.getElementById("ketqua").innerHTML = "5%";
+            document.getElementById("tongtien").innerHTML = tien * 105 / 100;
+        }
+    }
+</script>
+</body>
+</html>

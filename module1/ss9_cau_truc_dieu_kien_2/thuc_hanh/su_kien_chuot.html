@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su kien chuot</title>
+</head>
+<body style="width: 40%">
+<form>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb6i7mngoQXJUCPa4n1mEvSIuI-DLr0d5wUQ&usqp=CAU"
+         id="ball">
+    <br><br>
+    <input type="button" onclick="moverLeft()" value="Move left">
+    <input type="button" onclick="moveright()" value="Move right">
+    <input type="button" onclick="moverUp()" value="Move up">
+    <input type="button" onclick="moverDown()" value="Move down">
+</form>
+<script>
+    let picture = document.getElementById("ball");
+    window.onload = ketQua();
+    function ketQua() {
+        picture = document.getElementById("ball");
+        picture.style.position = 'relative';
+        picture.style.left = '0px';
+        picture.style.top = '0px';
+    }
+
+    function moveright() {
+        picture.style.left = parseInt(picture.style.left) + 50 + 'px';
+    }
+
+    function moverLeft() {
+        picture.style.left = parseInt(picture.style.left) + -50 + 'px';
+    }
+
+    function moverUp() {
+        picture.style.top = parseInt(picture.style.top) + -50 + 'px'
+    }
+
+    function moverDown() {
+        picture.style.top = parseInt(picture.style.top) + 50 + 'px';
+    }
+</script>
+</body>
+</html>
