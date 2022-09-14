@@ -6,29 +6,25 @@
 </head>
 <body onload="docReady()">
 <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
-     style="position:absolute;left:0; top:0;" width=15%>
+     style="position:absolute;left:0; top:0;" height="100" width="80"/>
 <script>
-    let picture = document.getElementById("nobita").innerHTML;
-    window.onload = docReady()
-    picture.style.left = '0px';
-    picture.style.top = '0px';
-
     function upArrowPressed() {
-        picture.style.top = parseInt(picture.style.top) - 50 + 'px';
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
     }
-
     function downArrowPressed() {
-         picture.style.top = parseInt(picture.style.top) + 50 + 'px';
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
     }
-
     function leftArrowPressed() {
-        picture.style.left = parseInt(picture.style.left) - 50 + 'px';
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
     }
-
     function rightArrowPressed() {
-        picture.style.left = parseInt(picture.style.left) + 50 + 'px';
-    }
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
 
+    }
     function moveSelection(evt) {
         switch (evt.keyCode) {
             case 37:
