@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTienBanDau = +prompt("Nhập số tiền bạn muốn vay là VND");
+    let phanTramLaiSuat = +prompt("Nhập số lãi suất mong muốn (%)");
+    let month = +prompt("Số tháng mong muốn");
+    for (let i = 1; i <= month; i++) {
+        soTienLai = soTienBanDau * phanTramLaiSuat / 100 * i;
+        tongTien = soTienLai + soTienBanDau;
+        soTienBanDau += soTienLai;
+        document.write("Tổng số tiền tháng " + i + " là " + tongTien + "<br>");
+    }
+</script>
+</body>
+</html>
