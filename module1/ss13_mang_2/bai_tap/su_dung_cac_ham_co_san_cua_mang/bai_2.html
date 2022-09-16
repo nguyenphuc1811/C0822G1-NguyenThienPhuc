@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập 1 dãy số bất kỳ");
+    let chuoi = number.toString();
+    let ketQua = [chuoi[0]];
+    for (let i = 1; i < chuoi.length; i++) {
+        if ((chuoi[i - 1] % 2 === 0) && (chuoi[i] % 2 === 0)) {
+            ketQua.push('-', chuoi[i]);
+        } else {
+            ketQua.push(chuoi[i]);
+        }
+    }
+    document.write(ketQua.join(''))
+</script>
+</body>
+</html>

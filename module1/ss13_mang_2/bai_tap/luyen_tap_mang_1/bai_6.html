@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let theNumber = [];
+    for (let i = 0; i < 10; i++) {
+        let a = +prompt("nhập 1 số bất kỳ số: " + i + " =");
+        theNumber.push(a);
+    }
+    let v = +prompt("nhập 1 số bất kỳ để tìm xem có trong mảng vừa nhập hay k");
+    if(theNumber.includes(v) === true){
+        alert("V is in the array là "+ v);
+    }else {
+        alert("V is not in the array");
+    }
+</script>
+</body>
+</html>

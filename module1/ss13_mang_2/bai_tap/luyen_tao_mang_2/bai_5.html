@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</title>
+</head>
+<body>
+<script>
+    let theNumberA = [];
+    for (let i = 0; i < 5; i++) {
+        let a = +prompt("nhập 1 số bất kỳ số: " + i + " =");
+        theNumberA.push(a);
+    }
+    let theNumberB = [];
+    for (let i = 0; i < 5; i++) {
+        let b = +prompt("nhập 1 số bất kỳ số: " + i + " =");
+        theNumberB.push(b);
+    }
+    for (let i = 0; i < theNumberA.length; i++) {
+        for (let j = 0; j < theNumberB.length; j++) {
+            if (theNumberA[i] === theNumberB[j]) {
+                document.write("2 chuỗi có 2 phần tử giống nhau là i = " + i + "j = " + j + "<br>")
+            }
+        }
+    }
+</script>
+</body>
+</html>

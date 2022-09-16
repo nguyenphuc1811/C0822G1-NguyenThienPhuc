@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập từ tiếng Anh để đổi qua tiếng Việt <input type="text" id="englishToChange">
+<button onclick="enter()">Dịch</button>
+<p id="ketQua"></p>
+<script>
+    let tiengAnh = ['apple', 'banana'];
+    let tiengViet = ['táo', 'chuối'];
+
+    function enter() {
+        let english = document.getElementById("englishToChange").value;
+        let a = tiengAnh.indexOf(english);
+        document.getElementById("ketQua").innerHTML = tiengViet[a];
+    }
+
+</script>
+</body>
+</html>
