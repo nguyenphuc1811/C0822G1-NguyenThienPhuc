@@ -6,6 +6,19 @@
         bởi ký tự ( _ )</title>
 </head>
 <body>
+<script>
+    let chuoi = prompt("Nhập 1 đoạn chữ và số bất kỳ");
+    let mang = chuoi.split('');
+    let count = 0;
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] === "-") {
+            mang.splice(i,1,'_');
+        }
+    }
+    for (let i = 0; i <mang.length ; i++) {
+        document.write(mang[i]);
+    }
 
+</script>
 </body>
 </html>

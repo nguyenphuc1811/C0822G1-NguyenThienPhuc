@@ -6,33 +6,23 @@
 </head>
 <body>
 <script>
-    let nhapMotChuoi = prompt("Viết 1 đoạn chữ thường bất kỳ");
-    let chuoi = nhapMotChuoi.toString();
-    let ketQua =[chuoi[0]];
-    for (let i = 1; i <ketQua.length ; i++) {
-        if( === ' '){
-            ketQua.push(chuoi[i]);
-        }else {
-            ketQua.push(chuoi[i].toLocaleUpperCase);
+    let chuoi = prompt("Nhập 1 đoạn chữ và số bất kỳ");
+    let mang = chuoi.split('');
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let chuInHoa = upper.split('');
+    let chuInThuong = lower.split('');
+    for (let i = 0; i <chuoi.length ; i++) {
+        if (chuInHoa.includes(mang[i]) === true){
+            mang.splice(i,1,chuInThuong[chuInHoa.indexOf(mang[i])]);
+        }else if(chuInThuong.includes(mang[i]) === true){
+            mang.splice(i,1,chuInHoa[chuInThuong.indexOf(mang[i])]);
         }
     }
-document.write(ketQua.join(''));
-    // for(var x=0; x<str.length; x++)
-    // {
-    //     if(UPPER.indexOf(str[x]) !== -1)
-    //     {
-    //         result.push(str[x].toLowerCase());
-    //     }
-    //     else if(LOWER.indexOf(str[x]) !== -1)
-    //     {
-    //         result.push(str[x].toUpperCase());
-    //     }
-    //     else
-    //     {
-    //         result.push(str[x]);
-    //     }
-    // }
-    // console.log(result.join(''));
+
+    for (let i = 0; i <mang.length ; i++) {
+        document.write(mang[i]);
+    }
 </script>
 </body>
 </html>
