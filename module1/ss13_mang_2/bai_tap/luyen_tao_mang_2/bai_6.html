@@ -7,15 +7,13 @@
 </head>
 <body>
 <script>
-    let chuoi = prompt("Nhập 1 đoạn chữ và số bất kỳ");
-    let mang = chuoi.split('');
-    let count = 0;
+    let mang = ["m", "-", "a", "b", "c", "d"];
     for (let i = 0; i < mang.length; i++) {
         if (mang[i] === "-") {
-            mang.splice(i,1,'_');
+            mang.splice(i, 1, '_');
         }
     }
-    for (let i = 0; i <mang.length ; i++) {
+    for (let i = 0; i < mang.length; i++) {
         document.write(mang[i]);
     }
 

@@ -11,11 +11,11 @@
         let a = +prompt("nhập 1 số bất kỳ số: " + i + " =");
         theNumber.push(a);
     }
-    let giaTriTB = 0;
+    let tongGiaTri = 0;
     for (let m = 0; m < theNumber.length; m++) {
-        giaTriTB += theNumber[m];
+        tongGiaTri += theNumber[m];
     }
-    document.write("Giá trị trung bình của 10 phần tử là: " + giaTriTB / 10 + "<br>");
+    document.write("Giá trị trung bình của 10 phần tử là: " + tongGiaTri / 10 + "<br>");
     let max = 0;
     let index = 0;
     for (let j = 0; j < theNumber.length; j++) {

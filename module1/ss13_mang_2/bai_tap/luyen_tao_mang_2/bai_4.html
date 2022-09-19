@@ -7,14 +7,14 @@
 <body>
 <script>
     let chuoi = prompt("Nhập 1 đoạn chữ và số bất kỳ");
-    let mang  = chuoi.split('');
+    let mang = chuoi.split(' ');
     let count = 0;
     for (let i = 0; i < mang.length; i++) {
-        if(isNaN(mang[i])){
+        if (mang[i] !== "") {
             count++;
         }
     }
-    alert("có " + count + " chữ trong chuỗi vừa nhập");
+    alert(count);
 </script>
 </body>
 </html>

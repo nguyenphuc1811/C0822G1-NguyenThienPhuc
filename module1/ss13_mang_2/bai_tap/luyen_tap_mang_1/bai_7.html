@@ -12,14 +12,15 @@
         theNumber.push(a);
     }
     let v = +prompt("nhập 1 số bất kỳ để tìm xem có trong mảng vừa nhập hay k");
-    if(theNumber.includes(v) === true){
-        theNumber.splice(theNumber.indexOf(v),1);
-        theNumber.push(0);
-        document.write(theNumber);
-
-    }else {
-        alert("V is not in the array");
+    for (let i = 0; i <theNumber.length ; i++) {
+        if(theNumber[i] === v){
+            theNumber.splice(i,1);
+            theNumber.push(0);
+            i--;
+        }
     }
+    alert(theNumber);
+
 </script>
 </body>
 </html>

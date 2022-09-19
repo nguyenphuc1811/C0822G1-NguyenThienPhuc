@@ -6,22 +6,20 @@
 </head>
 <body>
 <script>
-    let theNumberA = [];
-    for (let i = 0; i < 5; i++) {
-        let a = +prompt("nhập 1 số bất kỳ số: " + i + " =");
-        theNumberA.push(a);
-    }
-    let theNumberB = [];
-    for (let i = 0; i < 5; i++) {
-        let b = +prompt("nhập 1 số bất kỳ số: " + i + " =");
-        theNumberB.push(b);
-    }
-    for (let i = 0; i < theNumberA.length; i++) {
-        for (let j = 0; j < theNumberB.length; j++) {
-            if (theNumberA[i] === theNumberB[j]) {
-                document.write("2 chuỗi có 2 phần tử giống nhau là i = " + i + "j = " + j + "<br>")
-            }
+    let chuoi1 = prompt("Nhập 1 chuỗi bất kì(chuỗi 1)");
+    let chuoi2 = prompt("Nhập 1 chuỗi bất kì(chuỗi 2)");
+    let mang1 = chuoi1.split("");
+    let mang2 = chuoi2.split("");
+    let count = 0;
+    for (let i = 0; i < mang1.length; i++) {
+        if (mang1[i] === mang2[i]) {
+            count++;
         }
+    }
+    if (count === mang1.length && count === mang2.length) {
+        alert("2 mảng giống nhau");
+    } else {
+        alert("2 mảng không giống nhau");
     }
 </script>
 </body>
