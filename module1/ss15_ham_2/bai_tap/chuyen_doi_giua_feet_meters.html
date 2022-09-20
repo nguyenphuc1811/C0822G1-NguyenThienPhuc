@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập Foot để đổi thành Meters
+<input oninput="doiFeetThanhMeters()" type="number" id="nhapFeet">
+<p id="chuyenThanhMeters"></p>
+<br>
+Nhập Meters để đổi thành Foot
+<input oninput="doiMetersThanhFeet()" type="number" id="nhapMeters">
+<p id="chuyenThanhFeet"></p>
+<script>
+    function doiFeetThanhMeters() {
+        let feet = document.getElementById("nhapFeet").value;
+        document.getElementById("chuyenThanhMeters").innerHTML = "Meter = " + 0.305 * feet;
+    }
+
+    function doiMetersThanhFeet() {
+        let meters = document.getElementById("nhapMeters").value;
+        document.getElementById("chuyenThanhFeet").innerHTML = "Feet = " + 3.279 * meters;
+    }
+
+</script>
+</body>
+</html>

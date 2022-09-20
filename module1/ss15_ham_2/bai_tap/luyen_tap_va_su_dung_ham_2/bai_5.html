@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMinNumber(a, b, c) {
+        if (a > b && a > c) {
+            return a + " là số lớn nhất";
+        } else if (b > c) {
+            return +" là số lớn nhất";
+        } else {
+            return +c + " là số lớn nhất";
+        }
+    }
+
+    alert(findMinNumber(+prompt("NHập số a"), +prompt("NHập số b"), +prompt("NHập số c")));
+</script>
+</body>
+</html>

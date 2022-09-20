@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập 1 số để kiểm tra xem số đó phải phả số nguyên tố");
+    let count = 0;
+
+    function kiemTraSoNguyenTo(a) {
+        for (let i = 1; i < 10000; i++) {
+            if (a % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    if (kiemTraSoNguyenTo(number)) {
+        alert("Là số nguyên tố");
+    } else {
+        alert("Không phải là số nguyên tố");
+    }
+</script>
+</body>
+</html>

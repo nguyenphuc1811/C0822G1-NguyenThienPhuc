@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập 1 chuỗi bất kỳ");
+    let mang = str.split("");
+
+    function kiemTra(b) {
+        let count = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] === b) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
+
+    alert(kiemTra(prompt("nhập 1 ký tự để kiểm tra")));
+</script>
+</body>
+</html>

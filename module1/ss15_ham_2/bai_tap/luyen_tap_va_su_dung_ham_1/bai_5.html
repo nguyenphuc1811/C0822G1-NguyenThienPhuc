@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập chòm sao <input type="text" id="nhapChomSao">
+<button onclick="enter()">Đổi</button>
+<p id="ketQua"></p>
+<script>
+    let str1 = "Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe, Regulus";
+    let mang1 = str1.split(", ");
+    let str2 = "Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major,Leo";
+    let mang2 = str2.split(", ");
+
+    function enter() {
+        let chomSao1 = document.getElementById("nhapChomSao").value;
+        let a = mang1.indexOf(chomSao1);
+        if (chomSao1 === "") {
+            alert("Nhập lại chòm sao muốn đổi");
+        } else {
+            alert(mang2[a]);
+        }
+    }
+
+</script>
+</body>
+</html>
