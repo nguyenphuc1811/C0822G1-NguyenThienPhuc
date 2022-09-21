@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    class Rectangle {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        getChuViHinhChuNhat() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+
+        getDienTichHinhChuNhat() {
+            return this.chieuRong * this.chieuDai;
+        }
+
+        display(viTri1,viTri2) {
+            let canvas = document.getElementById("myCanvas");
+            let hcn = canvas.getContext("2d");
+            hcn.fillStyle = "yellow";
+            hcn.fillRect(viTri1,viTri2 , this.chieuDai, this.chieuRong);
+        }
+    }
+
+    let rectangle = new Rectangle(200, 100);
+    alert("Chu vi hình chữ nhật = " + rectangle.getChuViHinhChuNhat());
+    alert("Diện tích hình chữ nhật = " + rectangle.getDienTichHinhChuNhat());
+    rectangle.display(20,20);
+</script>
+</body>
+</html>
