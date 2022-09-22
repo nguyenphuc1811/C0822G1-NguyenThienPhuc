@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Apple {
+        constructor(khoiLuong) {
+            this.khoiLuong = khoiLuong;
+        }
+
+        setKhoiLuong(khoiLuong) {
+            this.khoiLuong = khoiLuong;
+        }
+
+        getKhoiLuong() {
+            return this.khoiLuong;
+        }
+
+        isEmpty() {
+            if (this.khoiLuong > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+                this.khoiLuong--;
+            } else {
+               document.write("hết táo");
+            }
+        }
+    }
+
+    class Human {
+        constructor(ten, gioiTinh, canNang) {
+            this.ten = ten;
+            this.gioiTinh = gioiTinh;
+            this.canNang = canNang;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setGioiTinh(gioiTinh) {
+            this.gioiTinh = gioiTinh;
+        }
+
+        getGioiTinh() {
+            return this.gioiTinh;
+        }
+
+        setCanNang(canNang) {
+            this.canNang = canNang;
+        }
+
+        getCanNang() {
+            return this.canNang;
+        }
+
+        noi(a) {
+            return document.write(a);
+        }
+        eat(apple) {
+            if (apple.getKhoiLuong() > 0) {
+                apple.decrease();
+                this.canNang++;
+            } else {
+                document.write("Hết táo");
+            }
+        }
+    }
+
+    let adam = new Human("Adam", "Nam", 70);
+    let eva = new Human("Eva", "Nữ", 45);
+    let tao = new Apple(10);
+    while (tao.getKhoiLuong() > 0) {
+        document.write("Adam ăn táo <br>")
+        adam.eat(tao);
+        document.write("Quả táo còn: " + tao.getKhoiLuong() + " miếng<br>");
+        document.write("Cân nặng của Adm là: " + adam.getCanNang() + " kg" + "<br>");
+        document.write("Eva ăn táo <br>")
+        eva.eat(tao);
+        document.write("Quả táo còn: " + tao.getKhoiLuong() + " miếng<br>");
+        document.write("Cân nặng của Adm là: " + eva.getCanNang() + " kg" + "<br>");
+    }
+</script>
+</body>
+</html>
