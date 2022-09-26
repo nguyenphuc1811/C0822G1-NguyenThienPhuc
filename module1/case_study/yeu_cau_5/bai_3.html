@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timMaxMin(m, n) {
+        let mang = []
+        for (let i = 0; i < m; i++) {
+            mang[i] = [];
+            for (let j = 0; j < n; j++) {
+                mang[i][j] = +prompt("Nhập số vào cột " + i + " chuỗi " + j);
+            }
+        }
+        let max = mang[0][0];
+        let min = mang[0][0];
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (mang[i][j] > max) {
+                    max = mang[i][j];
+                }
+                if (mang[i][j] < min) {
+                    min = mang[i][j];
+                }
+            }
+        }
+        alert("Số lớn nhất là " + max + " Số nhỏ nhất là " + min);
+    }
+    timMaxMin(4,4);
+</script>
+</body>
+</html>

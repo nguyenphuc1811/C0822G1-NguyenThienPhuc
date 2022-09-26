@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap;
+    let tongTien = 0;
+    do {
+        nhap = +prompt("Menu đồ uống:" +
+            "\n1. Cafe" +
+            "\n2. Cam vắt" +
+            "\n3. Nước ép cà rốt" +
+            "\n4. Nước ép cà chua" +
+            "\n5. Nước lọc" +
+            "\n6. Nước dừa" +
+            "\n7. Thoát gọi món ");
+        switch (nhap) {
+            case 1:
+                let soLuongCafe = +prompt("Giá tiền là 80000 " + " Nhập số lương");
+                alert(soLuongCafe + " Ly = " + soLuongCafe * 80000);
+                tongTien += soLuongCafe * 80000;
+                break;
+            case 2:
+                let soLuongCamVat = +prompt("Giá tiền là 70000 " + " Nhập số lương");
+                alert(soLuongCamVat + " Ly = " + soLuongCamVat * 70000);
+                tongTien += soLuongCamVat * 70000;
+                break;
+            case 3:
+                let soLuongNuocEpCaRot = +prompt("Giá tiền là 60000 " + " Nhập số lương");
+                alert(soLuongNuocEpCaRot + " Ly = " + soLuongNuocEpCaRot * 60000);
+                tongTien += soLuongNuocEpCaRot * 60000;
+                break;
+            case 4:
+                let soLuongNuocEpCaChua = +prompt("Giá tiền là 50000 " + " Nhập số lương");
+                alert(soLuongNuocEpCaChua + " Ly = " + soLuongNuocEpCaChua * 50000);
+                tongTien += soLuongNuocEpCaChua * 60000;
+                break;
+            case 5:
+                let soLuongNuocLoc = +prompt("Giá tiền là 20000 " + " Nhập số lương");
+                alert(soLuongNuocLoc + " Ly = " + soLuongNuocLoc * 20000);
+                tongTien += soLuongNuocLoc * 60000;
+                break;
+            case 6:
+                let soLuongNuocDua = +prompt("Giá tiền là 55000 " + " Nhập số lương");
+                alert(soLuongNuocDua + " Ly = " + soLuongNuocDua * 55000);
+                tongTien += soLuongNuocDua * 60000;
+                break;
+            case 7:
+                alert("Tổng tiền là " + tongTien);
+                break;
+            default:
+                alert("Nhập lại");
+        }
+    } while (nhap !== 7);
+</script>
+</body>
+</html>

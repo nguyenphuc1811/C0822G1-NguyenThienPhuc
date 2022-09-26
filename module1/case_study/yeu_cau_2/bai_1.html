@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = +prompt("Nhập lương");
+    let thue;
+    let tiengLuong;
+    if(nhap >= 15000000){
+        thue = nhap*20/100;
+    }else if(nhap>=7000000 ){
+        thue = nhap*10/100;
+    }else {
+        thue = nhap *5/100;
+    }
+    tiengLuong = nhap - thue;
+    alert("Thuế thu nhập là = " + thue + " tiền lương còn lại = " + tiengLuong  );
+</script>
+</body>
+</html>
